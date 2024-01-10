@@ -18,8 +18,11 @@ The initial concept of this app drew inspiration from existing and successful bo
 1. [Acuity Scheduling](https://acuityscheduling.com/)
 
 2. [Picktime](https://www.picktime.com/)\
-This booking website has a very user friendly and easy to use interface, one of its most intesresting features 
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/b802fb5d-d339-4c31-91d3-da060ce0c0ee)
+This booking website has a very user friendly and easy to use interface, one of it's most intesresting features is the possibility to link other online services to Picktime website, as shown in the picture below.
+![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/124637a8-9e3a-414d-85c5-a08898eb390a)
+
+
 
 
 3. [Square Appointments](https://squareup.com/us/en/appointments)
