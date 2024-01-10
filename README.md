@@ -30,8 +30,22 @@ The initial concept of this app drew inspiration from existing and successful bo
    ![Square Appointments 2](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/a01a4ec1-9ad1-49ad-bf65-809f29595c8c)
 
 4. [**SimplyBook.me**](https://simplybook.me/)
-   - SimplyBook.me offers the option to control metrics and client activities according to the number of uses.
-   ![SimplyBook.me](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/be60bedd-9375-4721-8494-8ea1cc4b81da)
+   - SimplyBook.me is an online appointment scheduling software. It's designed for service-based industries such as beauty salons, healthcare providers, professional services, and more. Here are some key features:
+      - Online Booking: You can set your services and service providers, display your availability, and accept bookings 24/7.
+      - Notifications: It sends reminders to staff and clients whenever bookings are made, cancelled, or rescheduled.
+      - Client and Admin Apps: It offers a custom client app for booking services and an admin app for managing your business from anywhere.
+      - Payments: It accepts online payments and deposits through various payment processors like PayPal, Stripe, and others.
+      - Integration & API: It integrates with Facebook, Instagram, Google My Business, Quickbooks, and other systems. It also allows you to build your own custom integrations using its API.
+      - Custom Features: It offers custom features like coupons, gift cards, custom emails, product sales, memberships, promotion systems, HIPAA compliance, SOAP, admission forms, packages, POS, deposits, related resources,       tickets, and more.
+      According to a review on Forbes, SimplyBook.me is a good choice for service-based industries and also works for online services including software as a service (SaaS) businesses that need to schedule demos or          consultants who want to connect via online meeting software. It offers a free plan and paid plans with additional features. It's also noted for its ease of use and HIPAA compliance.
+
+   The whole application works arround the main calendar, where you can check your future appointments and organize yourself
+   ![point of sale](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/0038eeb2-32dc-4643-aafe-8035ffdd60d4)
+   ![Callendar](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/0dc2e209-9440-4dad-be54-8720be9a6974)
+   ![appointment](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/72fc948a-4736-452c-9625-346060f30d9c)
+
+
+
 
 5. [**Book Like A Boss**](https://www.booklikeaboss.com/)
    - This website offers the options to schedule in a user-friendly and customizable interface, serving as a service to enterprises.
