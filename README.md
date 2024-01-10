@@ -17,14 +17,15 @@ The initial concept of this app drew inspiration from existing and successful bo
 
 1. [Acuity Scheduling](https://acuityscheduling.com/)
 
-This booking website shows a solution for interprises, where they can buy a plan and receive acess to a booking interface they can use with theyr clients.
+This booking platform is tailored for enterprises, offering plans that grant access to a user-friendly booking interface for minimal interaction with their clients.
 
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/abf042b0-0092-49c5-affd-6c0cc7bd1d40)
 
 
-2. [Picktime](https://www.picktime.com/)\
-![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/b802fb5d-d339-4c31-91d3-da060ce0c0ee)
+2. [Picktime](https://www.picktime.com/)
+
 This booking website has a very user friendly and easy to use interface, one of it's most intesresting features is the possibility to link other online services to Picktime website, as shown in the picture below.
+![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/b802fb5d-d339-4c31-91d3-da060ce0c0ee)
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/104631043/124637a8-9e3a-414d-85c5-a08898eb390a)
 
 
@@ -54,7 +55,7 @@ this website offers the options to schedule in a user frendy and customizable in
 
 
 6. [Zoho Bookings](https://www.zoho.com/bookings/)
-As we can see in the images below, this website, it offers a calendar like sistem for scheduling task.
+Featuring a calendar-like system, Zoho Bookings streamlines task scheduling with intuitive images below.
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/b6da24a1-8d17-4713-b5d1-961995416669)
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/c71d0fe4-d61d-4d97-ba50-3b4bab6f67b2)
 
@@ -82,6 +83,7 @@ this website shows right away the option to choose the iten wanted and the amoun
 
 This one has a login option and needs the information to where the person is going before the user can chose anything.
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/8a18642b-8cb4-4fb2-a0b6-1c42d8b20333)
+![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/ce9f85d5-3dc2-4fe9-86a4-314ff0f9d917)
 
 
 
