@@ -73,7 +73,6 @@ Thiw webpage shows a clean design, a fast acess to the principal function and it
 9. [Priceline](https://www.priceline.com/)
 this website shows right away the option to choose the iten wanted and the amount of time the user wants to chedule, but the interface is very poluted with information.
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/d40e52ef-e935-40f8-b19e-fab3cd9df0ce)
-![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/a92a3ba6-f46b-44ce-bffc-9f3851d4d0df)
 
 
 ![image](https://github.com/kauanBestel/flutter-equipment-booking/assets/143647733/50fa3e74-4f6b-4e82-9d47-aedb1185a7b2)
