@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "328800044788",
+    "project_id": "equipment-scheduling-66e56",
+    "storage_bucket": "equipment-scheduling-66e56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328800044788:android:a938888f9efe54c2a0c0a1",
+        "android_client_info": {
+          "package_name": "com.example.equipment_boking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoleV0glrSVRqMeuljNFzVDyetE_bOrxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
