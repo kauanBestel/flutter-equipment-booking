@@ -16,58 +16,75 @@ class RegisterPage extends StatelessWidget {
           title: const Text('Conecta 2030'),
           centerTitle: true,
         ),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const StepsIndicator(selectedStep: 1, nbSteps: 3),
-                const SizedBox(height: 150),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'Nome',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+        body: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const StepsIndicator(
+                      selectedStep: 0,
+                      nbSteps: 3,
+                      lineLength: 100,
+                      unselectedStepSize: 20,
+                      selectedStepSize: 30,
                     ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'E-mail',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                    const SizedBox(height: 20),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(200),
+                      child: Image.asset(
+                        'assets/images/conectaHD.jpeg',
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 20.0),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'Senha',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                    const SizedBox(height: 10),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: 'Nome',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
                     ),
-                  ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: 'E-mail',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20.0),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: 'Senha',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    TextFormField(
+                      decoration: InputDecoration(
+                          labelText: 'Confirmar senha',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          )),
+                    ),
+                    const SizedBox(height: 20.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        //botão
+                      },
+                      child: const Text('Entrar'),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 20),
-                TextFormField(
-                  decoration: InputDecoration(
-                      labelText: 'Confirmar senha',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      )),
-                ),
-                const SizedBox(height: 20.0),
-                ElevatedButton(
-                  onPressed: () {
-                    //botão
-                  },
-                  child: const Text('Entrar'),
-                ),
-              ],
+              ),
             ),
           ),
         ),
