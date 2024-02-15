@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:steps_indicator/steps_indicator.dart';
 
 void main() {
   runApp(const RegisterPage());
@@ -21,6 +22,8 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const StepsIndicator(selectedStep: 1, nbSteps: 3),
+                const SizedBox(height: 150),
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Nome',
