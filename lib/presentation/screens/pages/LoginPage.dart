@@ -63,11 +63,15 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                ElevatedButton(
-                  onPressed: () {
-                    //botão
-                  },
-                  child: const Text('Entrar'),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0xFF6DC0F7)),
+                    child: Text('Login'),
+                  ),
                 ),
               ],
             ),

@@ -14,7 +14,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SafeArea(
+        body: Center(
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(20.0),
@@ -94,9 +94,16 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Entrar'),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Color(0xFF6DC0F7)),
+                      child: Text('Login'),
+                    ),
                   ),
                 ],
               ),
