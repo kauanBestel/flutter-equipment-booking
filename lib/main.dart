@@ -1,7 +1,15 @@
+import 'package:equipment_boking/firebase_options.dart';
+import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/screens/RegisterPage.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
