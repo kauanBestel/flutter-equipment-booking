@@ -2,7 +2,7 @@ import 'package:equipment_boking/firebase_options.dart';
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:equipment_boking/presentation/screens/RegisterPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,3 +1,5 @@
+import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
 import 'package:flutter/material.dart';
 import 'package:steps_indicator/steps_indicator.dart';
 
@@ -73,6 +75,22 @@ class RegisterPage extends StatelessWidget {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             )),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginPage(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          'Já tem cadastro? Login',
+                          style: TextStyle(
+                            color: Colors.blue,
+                          ),
+                        ),
                       ),
                     ],
                   ),
