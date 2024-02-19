@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
 
 void main() {
   runApp(const LoginPage());
@@ -11,16 +12,22 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Conecta 2030'),
-          centerTitle: true,
-        ),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(200),
+                  child: Image.asset(
+                    'assets/images/conectaHD.jpeg',
+                    height: 200,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Email',
@@ -39,12 +46,32 @@ class LoginPage extends StatelessWidget {
                   ),
                   obscureText: true,
                 ),
-                const SizedBox(height: 20.0),
-                ElevatedButton(
-                  onPressed: () {
-                    //botão
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPage(),
+                      ),
+                    );
                   },
-                  child: const Text('Entrar'),
+                  child: const Text(
+                    'Não tem Login? Cadastro',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20.0),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0xFF6DC0F7)),
+                    child: Text('Login'),
+                  ),
                 ),
               ],
             ),

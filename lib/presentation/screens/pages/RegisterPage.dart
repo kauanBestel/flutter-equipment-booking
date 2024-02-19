@@ -1,3 +1,5 @@
+import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
 import 'package:flutter/material.dart';
 import 'package:steps_indicator/steps_indicator.dart';
 
@@ -12,7 +14,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SafeArea(
+        body: Center(
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(20.0),
@@ -74,11 +76,34 @@ class RegisterPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10.0),
                             )),
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginPage(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          'Já tem cadastro? Login',
+                          style: TextStyle(
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Entrar'),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Color(0xFF6DC0F7)),
+                      child: Text('Login'),
+                    ),
                   ),
                 ],
               ),
