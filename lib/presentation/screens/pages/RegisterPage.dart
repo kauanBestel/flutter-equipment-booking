@@ -1,5 +1,5 @@
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
-import 'package:equipment_boking/presentation/widgets/custom.textformfield.dart';
+import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:equipment_boking/presentation/widgets/custom_buttom.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ void main() {
 }
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,19 +33,19 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomTextFormField(label: 'teste1'),
+                    const CustomTextFormField(label: 'nome'),
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomTextFormField(label: 'teste2'),
+                    const CustomTextFormField(label: 'e-mail'),
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomTextFormField(label: 'teste3'),
+                    const CustomTextFormField(label: 'senha'),
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomTextFormField(label: 'teste4'),
+                    const CustomTextFormField(label: 'confirmar senha'),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
