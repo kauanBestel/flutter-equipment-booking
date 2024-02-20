@@ -1,12 +1,8 @@
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
-import 'package:equipment_boking/presentation/widgets/custom_buttom.dart';
+import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
-
-void main() {
-  runApp(const LoginPage());
-}
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -58,7 +54,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                const CustomButtom(
+                const CustomButton(
                   label: 'Login',
                 ),
               ],
