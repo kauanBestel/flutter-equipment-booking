@@ -1,11 +1,7 @@
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
-import 'package:equipment_boking/presentation/widgets/custom_buttom.dart';
+import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const RegisterPage());
-}
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -64,7 +60,7 @@ class RegisterPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const CustomButtom(label: 'Register'),
+                const CustomButton(label: 'Register'),
               ],
             ),
           ),
