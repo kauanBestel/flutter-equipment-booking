@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
-import 'package:equipment_boking/presentation/screens/pages/ProductPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const RegisterPage(),
+      home: const CalendarPage(),
     );
   }
 }

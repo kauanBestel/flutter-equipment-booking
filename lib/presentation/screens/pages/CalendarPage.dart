@@ -1,9 +1,10 @@
+import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:flutter/material.dart';
 import 'package:steps_indicator/steps_indicator.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class ProductPage extends StatelessWidget {
-  const ProductPage({super.key});
+class CalendarPage extends StatelessWidget {
+  const CalendarPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class ProductPage extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               StepsIndicator(
                 selectedStep: 0,
@@ -27,6 +28,7 @@ class ProductPage extends StatelessWidget {
                 lastDay: DateTime.utc(2030, 3, 14),
                 focusedDay: DateTime.now(),
               ),
+              const CustomBottomAppBar(),
             ],
           ),
         ),

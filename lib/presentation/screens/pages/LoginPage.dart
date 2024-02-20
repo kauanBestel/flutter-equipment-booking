@@ -27,20 +27,19 @@ class LoginPage extends StatelessWidget {
                     height: 200,
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+                const Column(
+                  children: [
+                    CustomTextFormField(
+                      label: 'E-mail',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    CustomTextFormField(
+                      label: 'Senha',
+                    ),
+                  ],
                 ),
-                CustomTextFormField(
-                  label: 'E-mail',
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                CustomTextFormField(
-                  label: 'Senha',
-                ),
-//
-//
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -60,7 +59,6 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 20.0),
                 const CustomButtom(
                   label: 'Login',
-                  buttonColor: Colors.red,
                 ),
               ],
             ),
