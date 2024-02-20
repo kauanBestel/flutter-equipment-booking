@@ -28,11 +28,11 @@ class CalendarPage extends StatelessWidget {
                 lastDay: DateTime.utc(2030, 3, 14),
                 focusedDay: DateTime.now(),
               ),
-              const CustomBottomAppBar(),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomAppBar(),
     );
   }
 }

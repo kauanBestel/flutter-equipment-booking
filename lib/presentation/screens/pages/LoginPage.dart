@@ -1,3 +1,4 @@
+import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:equipment_boking/presentation/widgets/custom_buttom.dart';
 import 'package:flutter/material.dart';
@@ -64,6 +65,7 @@ class LoginPage extends StatelessWidget {
             ),
           ),
         ),
+        bottomNavigationBar: const CustomBottomAppBar(),
       ),
     );
   }
