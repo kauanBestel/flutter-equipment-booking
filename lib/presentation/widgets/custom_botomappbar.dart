@@ -1,3 +1,5 @@
+import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
@@ -10,12 +12,22 @@ class CustomBottomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {},
+            icon: const Icon(Icons.shopping_cart),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const RegisterPage()));
+            },
           ),
           IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
+            icon: const Icon(Icons.calendar_month),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CalendarPage()));
+            },
           ),
         ],
       ),
