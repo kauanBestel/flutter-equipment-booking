@@ -1,10 +1,12 @@
 import 'package:equipment_boking/firebase_options.dart';
+import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: const ProductsPage(),
     );
   }
 }
