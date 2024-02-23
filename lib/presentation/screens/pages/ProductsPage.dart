@@ -1,4 +1,5 @@
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
 
@@ -9,13 +10,13 @@ class ProductsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
+        body: const Center(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(20.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CustomTextFormField(label: 'teste'),
+                CustomTextFormField(label: 'teste'),
               ],
             ),
           ),
@@ -24,11 +25,12 @@ class ProductsPage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LoginPage()),
+              MaterialPageRoute(builder: (context) => const LoginPage()),
             );
           },
           child: const Icon(Icons.arrow_forward),
         ),
+        bottomNavigationBar: const CustomBottomAppBar(),
       ),
     );
   }
