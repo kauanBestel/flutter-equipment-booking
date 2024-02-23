@@ -1,4 +1,6 @@
+import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -43,24 +45,30 @@ class RegisterPage extends StatelessWidget {
                     ),
                     const CustomTextFormField(label: 'confirmar senha'),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginPage(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          'Já tem cadastro? Login',
+                          style: TextStyle(
+                            color: Colors.blue,
                           ),
-                        );
-                      },
-                      child: const Text(
-                        'Já tem cadastro? Login',
-                        style: TextStyle(
-                          color: Colors.blue,
-                        ),
-                      ),
-                    ),
+                        )),
                   ],
                 ),
-                const CustomButton(label: 'Register'),
+                CustomButton(
+                    label: 'Register',
+                    onPress: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProductsPage()));
+                    }),
               ],
             ),
           ),

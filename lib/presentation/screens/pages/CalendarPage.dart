@@ -11,18 +11,18 @@ class CalendarPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              StepsIndicator(
+              const StepsIndicator(
                 selectedStep: 0,
                 nbSteps: 3,
                 lineLength: 100,
                 unselectedStepSize: 20,
                 selectedStepSize: 30,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TableCalendar(
                 firstDay: DateTime.utc(2010, 10, 16),
                 lastDay: DateTime.utc(2030, 3, 14),
