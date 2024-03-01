@@ -1,8 +1,8 @@
-import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
+import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -31,19 +31,25 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomTextFormField(label: 'nome'),
-                    const SizedBox(
-                      height: 20,
+                    const FormContainerWidget(
+                      hintText: 'Nome',
+                      isPasswordField: false,
                     ),
-                    const CustomTextFormField(label: 'e-mail'),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(height: 20),
+                    const FormContainerWidget(
+                      hintText: 'E-mail',
+                      isPasswordField: false,
                     ),
-                    const CustomTextFormField(label: 'senha'),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(height: 20),
+                    const FormContainerWidget(
+                      hintText: 'Senha',
+                      isPasswordField: true,
                     ),
-                    const CustomTextFormField(label: 'confirmar senha'),
+                    SizedBox(height: 20),
+                    const FormContainerWidget(
+                      hintText: 'Confirmar Senha',
+                      isPasswordField: true,
+                    ),
                     GestureDetector(
                         onTap: () {
                           Navigator.push(

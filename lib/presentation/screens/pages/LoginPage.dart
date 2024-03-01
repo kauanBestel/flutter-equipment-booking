@@ -24,7 +24,7 @@ class LoginPage extends StatelessWidget {
                     height: 200,
                   ),
                 ),
-                const Column(
+                 Column(
                   children: [
                     CustomTextFormField(
                       label: 'E-mail',
@@ -35,6 +35,8 @@ class LoginPage extends StatelessWidget {
                     CustomTextFormField(
                       label: 'Senha',
                     ),
+
+                    
                   ],
                 ),
                 GestureDetector(
