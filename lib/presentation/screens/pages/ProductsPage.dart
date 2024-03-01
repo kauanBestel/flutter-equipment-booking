@@ -10,11 +10,11 @@ class ProductsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: const Center(
+        body: Center(
           child: Padding(
             padding: EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: ListView(
+              shrinkWrap: true,
               children: [
                 CustomTextFormField(label: 'teste'),
               ],
