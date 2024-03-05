@@ -3,6 +3,7 @@ import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart'
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
+import 'package:flutter/widgets.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -24,9 +25,9 @@ class LoginPage extends StatelessWidget {
                     height: 200,
                   ),
                 ),
-                 Column(
-                  children: [
-                    CustomTextFormField(
+                 Column (
+                  children:  [
+                     CustomTextFormField(
                       label: 'E-mail',
                     ),
                     SizedBox(

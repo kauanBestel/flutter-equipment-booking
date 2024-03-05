@@ -1,4 +1,4 @@
-import 'package:equipment_boking/firebase_options.dart';
+import 'package:equipment_boking/presentation/firebaseAuth/firebase_options.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
