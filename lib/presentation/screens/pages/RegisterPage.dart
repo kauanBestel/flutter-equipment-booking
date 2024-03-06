@@ -69,11 +69,6 @@ class _RegisterPageState extends State<RegisterPage> {
                       hintText: 'Senha',
                       isPasswordField: true,
                     ),
-                    SizedBox(height: 20),
-                    FormContainerWidget(
-                      hintText: 'Confirmar Senha',
-                      isPasswordField: true,
-                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
