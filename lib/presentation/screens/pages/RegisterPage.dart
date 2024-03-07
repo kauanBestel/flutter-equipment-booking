@@ -115,7 +115,7 @@ class _RegisterPageState extends State<RegisterPage> {
       print("User is successfully created");
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const ProductsPage()),
+        MaterialPageRoute(builder: (context) => const LoginPage()),
       );
     } catch (e) {
       print("Error occurred: $e");
