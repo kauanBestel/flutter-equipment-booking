@@ -208,6 +208,8 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
+=======
   http:
     dependency: transitive
     description:
@@ -216,6 +218,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+>>>>>>> develop
   http_parser:
     dependency: transitive
     description:
