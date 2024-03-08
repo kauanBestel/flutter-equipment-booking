@@ -4,6 +4,7 @@ import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
 import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart';
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -40,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.max,
               children: [
-                Column(
+                ListView(
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(200),

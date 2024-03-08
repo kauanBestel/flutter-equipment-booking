@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
-import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart'; // Importando a página de registro
-import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart'; // Importando a página principal após o login
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart'; 
+import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart'; 
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 
