@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class FirebaseAuthService {
   FirebaseAuth _auth = FirebaseAuth.instance;
 
-  // Método para registrar um novo usuário com e-mail e senha
+  // Método para registrar um novo usuário com e-ma
   Future<User?> signUpWithEmailAndPassword(
       String email, String password) async {
     try {
