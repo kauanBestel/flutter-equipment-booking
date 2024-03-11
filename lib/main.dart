@@ -1,4 +1,5 @@
 import 'package:equipment_boking/presentation/firebaseAuth/firebase_options.dart';
+import 'package:equipment_boking/presentation/widgets/custom_product_selection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
@@ -29,7 +30,6 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
