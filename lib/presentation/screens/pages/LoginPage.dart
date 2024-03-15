@@ -1,3 +1,6 @@
+import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
+import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
+import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
 import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart'; 

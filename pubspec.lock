@@ -209,6 +209,7 @@ packages:
     source: sdk
     version: "0.0.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   http:
     dependency: transitive
@@ -227,6 +228,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+=======
+>>>>>>> main
   intl:
     dependency: transitive
     description:
