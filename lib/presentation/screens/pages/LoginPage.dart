@@ -1,11 +1,30 @@
-import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
-import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
+import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
+import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart'; 
+import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart'; 
+import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final FirebaseAuthService _auth = FirebaseAuthService();
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,54 +35,43 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.max,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(200),
-                  child: Image.asset(
-                    'assets/images/conectaHD.jpeg',
-                    height: 200,
-                  ),
-                ),
-                const Column(
+                Column(
                   children: [
-                    CustomTextFormField(
-                      label: 'E-mail',
+                    const SizedBox(height: 20),
+                    FormContainerWidget(
+                      controller: _emailController,
+                      hintText: 'E-mail',
+                      isPasswordField: false,
                     ),
-                    SizedBox(
-                      height: 20,
+                    const SizedBox(height: 20),
+                    FormContainerWidget(
+                      controller: _passwordController,
+                      hintText: 'Senha',
+                      isPasswordField: true,
                     ),
-                    CustomTextFormField(
-                      label: 'Senha',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RegisterPage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Ainda não tem cadastro? Registre-se',
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),
+                      ),
                     ),
                   ],
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterPage(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    'Não tem Login? Cadastro',
-                    style: TextStyle(
-                      color: Colors.blue,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20.0),
                 CustomButton(
-                  onPress: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const CalendarPage(),
-                      ),
-                    );
-                  },
                   label: 'Login',
+                  onPress: _signIn,
                 ),
               ],
             ),
@@ -71,5 +79,46 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _signIn() async {
+    String email = _emailController.text;
+    String password = _passwordController.text;
+
+    if (email.isEmpty || password.isEmpty) {
+      print("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    try {
+      var user = await _auth.signInWithEmailAndPassword(email, password);
+
+      if (user != null) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const ProductsPage()),
+        );
+      } else
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text("Erro de Login"),
+              content: Text(
+                  "Email ou senha incorretos. Por favor, tente novamente."),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("OK"),
+                ),
+              ],
+            );
+          },
+        );
+    } catch (e) {
+      print("Erro durante o login: $e");
+    }
   }
 }
