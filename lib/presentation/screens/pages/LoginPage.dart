@@ -1,23 +1,25 @@
+import 'package:equipment_boking/presentation/screens/pages/CalendarPage.dart';
+import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
 import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart'; 
 import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart'; 
+import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
   final FirebaseAuthService _auth = FirebaseAuthService();
 
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
@@ -39,13 +41,13 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Column(
                   children: [
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     FormContainerWidget(
                       controller: _emailController,
                       hintText: 'E-mail',
                       isPasswordField: false,
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     FormContainerWidget(
                       controller: _passwordController,
                       hintText: 'Senha',
@@ -103,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: const Text("Erro de Login"),
+              title: Text("Erro de Login"),
               content: Text(
                   "Email ou senha incorretos. Por favor, tente novamente."),
               actions: [
