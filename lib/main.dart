@@ -1,10 +1,7 @@
 import 'package:equipment_boking/presentation/firebaseAuth/firebase_options.dart';
-import 'package:equipment_boking/presentation/widgets/custom_product_selection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
-import 'package:equipment_boking/presentation/screens/pages/ProductsPage.dart';
-import 'package:equipment_boking/presentation/screens/pages/RegisterPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

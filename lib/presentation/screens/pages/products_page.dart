@@ -1,4 +1,4 @@
-import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
