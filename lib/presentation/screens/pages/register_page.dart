@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:equipment_boking/presentation/screens/pages/LoginPage.dart';
+import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 
@@ -9,6 +9,7 @@ class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _RegisterPageState createState() => _RegisterPageState();
 }
 
@@ -16,9 +17,9 @@ class _RegisterPageState extends State<RegisterPage> {
   final FirebaseAuthService _auth = FirebaseAuthService();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
