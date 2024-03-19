@@ -5,7 +5,7 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.label,
     required this.onPress,
-    this.buttonColor = const Color(0xFF075187),
+    this.buttonColor = const Color(0xFF6DC0F7),
     this.textColor = const Color.fromARGB(255, 255, 255, 255),
   });
 
