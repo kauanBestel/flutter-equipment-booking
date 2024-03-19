@@ -42,12 +42,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(200),
                   child: Image.asset(
-                    'assets/images/conectaHD.jpeg',
+                    'assets/images/imagemRota2.png',
                     height: 200,
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 20, 
                 ),
                 FormContainerWidget(
                   controller: _usernameController,
