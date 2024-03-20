@@ -42,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(200),
                   child: Image.asset(
-                    'assets/images/conectaHD.jpeg',
+                    'assets/images/imagemRota2.png',
                     height: 200,
                   ),
                 ),
@@ -93,8 +93,6 @@ class _RegisterPageState extends State<RegisterPage> {
       ),
     );
   }
-
-
 
   void _signUp() async {
     String username = _usernameController.text;
