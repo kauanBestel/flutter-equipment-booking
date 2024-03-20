@@ -1,5 +1,6 @@
 import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
+import 'package:equipment_boking/presentation/widgets/custom_product_selection.dart';
 import 'package:equipment_boking/presentation/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
 
@@ -11,16 +12,13 @@ class ProductsPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Padding(
-            padding: EdgeInsets.all(20.0),
-            child: ListView(
-              shrinkWrap: true,
-              children: [
-                CustomTextFormField(label: 'teste'),
-              ],
-            ),
+          child: CustomProduct(
+            label: "text",
+            onPress: () => {},
           ),
         ),
+
+//------------------------------botao-------------------------------------------
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.push(
@@ -35,3 +33,4 @@ class ProductsPage extends StatelessWidget {
     );
   }
 }
+//------------------------------------------------------------------------------
