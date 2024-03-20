@@ -14,23 +14,18 @@ class _CustomProductState extends State<CustomProduct> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+      
       children: [
-        SizedBox(
-          height: 60.0,
-          width: double.infinity,
-          child: GestureDetector(
-            onTap: widget.onPress,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all()),
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 0),
-              child: Center(
-                child: Text(
-                  widget.label,
-                ),
-              ),
+        GestureDetector(
+          onTap: widget.onPress,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Text(
+              widget.label,
             ),
           ),
         ),
@@ -38,3 +33,4 @@ class _CustomProductState extends State<CustomProduct> {
     );
   }
 }
+//---------------------

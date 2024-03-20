@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class CustomBottomAppBar extends StatelessWidget {
   const CustomBottomAppBar({
     super.key,
-    this.buttonColor = const Color(0xFF075187),
+    this.buttonColor = const Color(0xFF6DC0F7),
   });
 
   final Color buttonColor;
@@ -14,39 +14,44 @@ class CustomBottomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       margin: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.0),
         color: buttonColor,
       ),
-      child: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.shopping_cart),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ProductsPage(),
-                  ),
-                );
-              },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: const Icon(
+              Icons.shopping_cart,
+              color: Colors.white,
             ),
-            IconButton(
-              icon: const Icon(Icons.calendar_month),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const CalendarPage(),
-                  ),
-                );
-              },
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProductsPage(),
+                ),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.calendar_month,
+              color: Colors.white,
             ),
-          ],
-        ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CalendarPage(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }

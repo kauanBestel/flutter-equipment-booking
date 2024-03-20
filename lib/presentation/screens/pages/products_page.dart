@@ -12,13 +12,14 @@ class ProductsPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: CustomProduct(
-            label: "text",
-            onPress: () => {},
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: CustomProduct(
+              onPress: () {},
+              label: "OI",
+            ),
           ),
         ),
-
-//------------------------------botao-------------------------------------------
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.push(
@@ -33,4 +34,3 @@ class ProductsPage extends StatelessWidget {
     );
   }
 }
-//------------------------------------------------------------------------------

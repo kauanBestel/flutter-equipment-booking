@@ -22,6 +22,11 @@ class _CalendarPageState extends State<CalendarPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -60,7 +65,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   setState(() {
                     _selectedDay = selectedDay;
                     _focusedDay = focusedDay;
-                    focusedDay; // update `_focusedDay` here as well
+                    focusedDay;
                   });
                 },
               ),
