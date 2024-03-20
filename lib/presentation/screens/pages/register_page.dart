@@ -54,13 +54,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   hintText: 'Nome',
                   isPasswordField: false,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 FormContainerWidget(
                   controller: _emailController,
                   hintText: 'E-mail',
                   isPasswordField: false,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 FormContainerWidget(
                   controller: _passwordController,
                   hintText: 'Senha',
@@ -107,12 +107,15 @@ class _RegisterPageState extends State<RegisterPage> {
         'email': email,
       });
 
+      // ignore: avoid_print
       print("Usuário criado com sucesso");
       Navigator.push(
+        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(builder: (context) => const LoginPage()),
       );
     } catch (e) {
+      // ignore: avoid_print
       print("Ocorreu um erro: $e");
     }
   }

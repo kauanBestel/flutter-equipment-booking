@@ -1,6 +1,5 @@
 import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
