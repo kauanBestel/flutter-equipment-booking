@@ -55,7 +55,8 @@ class _CustomProductState extends State<CustomProduct> {
                 ),
               ),
               Expanded(
-                child: Center(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 20),
                   child: Text(
                     widget.label,
                     style: TextStyle(
