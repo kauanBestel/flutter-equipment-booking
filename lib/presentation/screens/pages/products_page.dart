@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
-import 'package:equipment_boking/presentation/widgets/custom_product_selection.dart';
+import 'package:equipment_boking/presentation/widgets/custom_product.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({super.key});
@@ -18,7 +18,6 @@ class ProductsPage extends StatelessWidget {
       'Produto 5',
       'Produto 5',
       'Produto 5',
-   
     ];
 
     return Scaffold(

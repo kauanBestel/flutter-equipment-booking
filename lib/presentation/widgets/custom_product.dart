@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomProduct extends StatefulWidget {
-  const CustomProduct({super.key, required this.onPress, required this.label});
+  const CustomProduct(
+      {super.key,
+      required this.onPress,
+      required this.label,
+      this.bgcolor = const Color(0xFF6DC0F7)});
 
   final VoidCallback onPress;
   final String label;
-
+  final Color bgcolor;
   @override
   State<CustomProduct> createState() => _CustomProductState();
 }
@@ -36,7 +39,6 @@ class _CustomProductState extends State<CustomProduct> {
               topRight: Radius.circular(10),
               bottomRight: Radius.circular(10)),
         ),
-//--------------------------------CONTAINER 2------------------------------------
         child: Container(
           margin: const EdgeInsets.only(left: 0, right: 10),
           decoration: const BoxDecoration(
@@ -56,10 +58,10 @@ class _CustomProductState extends State<CustomProduct> {
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Text(
                     widget.label,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
