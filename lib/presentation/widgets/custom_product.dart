@@ -34,7 +34,7 @@ class _CustomProductState extends State<CustomProduct> {
           boxShadow: [
             BoxShadow(
               color: isSelected
-                  ? Colors.green.withOpacity(1)
+                  ? Colors.green.withOpacity(0.4)
                   : Colors.transparent,
               blurRadius: 2.0,
               spreadRadius: 1.0,
@@ -60,6 +60,7 @@ class _CustomProductState extends State<CustomProduct> {
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(50),
               bottomLeft: Radius.circular(50),
+              
             ),
           ),
           height: 60,
