@@ -92,6 +92,7 @@ class _LoginPageState extends State<LoginPage> {
     String password = _passwordController.text;
 
     if (email.isEmpty || password.isEmpty) {
+      // ignore: avoid_print
       print("Por favor, preencha todos os campos.");
       return;
     }
@@ -101,29 +102,33 @@ class _LoginPageState extends State<LoginPage> {
 
       if (user != null) {
         Navigator.pushReplacement(
+          // ignore: use_build_context_synchronously
           context,
           MaterialPageRoute(builder: (context) => const ProductsPage()),
         );
-      } else
+      } else {
         showDialog(
+          // ignore: use_build_context_synchronously
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text("Erro de Login"),
-              content: Text(
+              title: const Text("Erro de Login"),
+              content: const Text(
                   "Email ou senha incorretos. Por favor, tente novamente."),
               actions: [
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text("OK"),
+                  child: const Text("OK"),
                 ),
               ],
             );
           },
         );
+      }
     } catch (e) {
+      // ignore: avoid_print
       print("Erro durante o login: $e");
     }
   }
