@@ -10,41 +10,57 @@ class CustomProduct extends StatefulWidget {
   final VoidCallback onPress;
   final String label;
   final Color bgcolor;
+
   @override
   State<CustomProduct> createState() => _CustomProductState();
 }
 
 class _CustomProductState extends State<CustomProduct> {
   bool isSelected = false;
+
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         setState(() {
           isSelected = !isSelected;
         });
       },
-      child: Container(
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 300),
         height: 90,
         width: double.infinity,
         decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: isSelected
+                  ? Colors.green.withOpacity(1)
+                  : Colors.transparent,
+              blurRadius: 2.0,
+              spreadRadius: 1.0,
+              offset: const Offset(0, 3),
+            ),
+          ],
           border: Border.all(
             color: Colors.black,
             width: 1.5,
           ),
           color: isSelected ? Colors.green : Colors.grey,
           borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(50),
-              bottomLeft: Radius.circular(50),
-              topRight: Radius.circular(10),
-              bottomRight: Radius.circular(10)),
+            topLeft: Radius.circular(50),
+            bottomLeft: Radius.circular(50),
+            topRight: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          ),
         ),
         child: Container(
           margin: const EdgeInsets.only(left: 0, right: 10),
           decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(50), bottomLeft: Radius.circular(50)),
+              topLeft: Radius.circular(50),
+              bottomLeft: Radius.circular(50),
+            ),
           ),
           height: 60,
           child: Row(
