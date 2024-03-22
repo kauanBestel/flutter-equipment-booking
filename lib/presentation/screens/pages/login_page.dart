@@ -46,13 +46,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Column(
                 children: [
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   FormContainerWidget(
                     controller: _emailController,
                     hintText: 'E-mail',
                     isPasswordField: false,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   FormContainerWidget(
                     controller: _passwordController,
                     hintText: 'Senha',

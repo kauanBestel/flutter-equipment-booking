@@ -10,11 +10,11 @@ class NavButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        shape: CircleBorder(),
-        padding: EdgeInsets.all(15),
-        backgroundColor: Color(0xFF6DC0F7),
+        shape: const CircleBorder(),
+        padding: const EdgeInsets.all(15),
+        backgroundColor: const Color(0xFF6DC0F7),
       ),
-      child: Icon(
+      child: const Icon(
         Icons.arrow_forward,
         color: Colors.white,
         size: 30,

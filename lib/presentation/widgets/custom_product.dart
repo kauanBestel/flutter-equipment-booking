@@ -27,7 +27,7 @@ class _CustomProductState extends State<CustomProduct> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         height: 90,
         width: double.infinity,
         decoration: BoxDecoration(

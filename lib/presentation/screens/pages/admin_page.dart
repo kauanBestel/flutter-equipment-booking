@@ -1,7 +1,6 @@
 import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AdminPage extends StatelessWidget {
   const AdminPage({super.key});
@@ -16,12 +15,12 @@ class AdminPage extends StatelessWidget {
               children: [
                 TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
+                        prefixIcon: Icon(Icons.search),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide(color: Colors.black)),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide(color: Colors.black)),
                         hintText: 'Search'))
               ],

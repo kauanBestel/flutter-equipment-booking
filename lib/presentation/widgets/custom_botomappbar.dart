@@ -1,4 +1,3 @@
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +31,7 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           for (var i = 0; i < iconList.length; i++)
-              IconButton(
+            IconButton(
               icon: Icon(
                 iconList[i],
                 color: Colors.white,
