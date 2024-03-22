@@ -1,9 +1,24 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
-class NavButton extends StatefulWidget {
-  const NavButton({super.key});
+class NavButton extends StatelessWidget {
+  final VoidCallback onPressed;
 
-override
-state <NavNutton> createstate() => _NavButton();
+  const NavButton({super.key, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        shape: CircleBorder(),
+        padding: EdgeInsets.all(15),
+        backgroundColor: Color(0xFF6DC0F7),
+      ),
+      child: Icon(
+        Icons.arrow_forward,
+        color: Colors.white,
+        size: 30,
+      ),
+    );
+  }
 }

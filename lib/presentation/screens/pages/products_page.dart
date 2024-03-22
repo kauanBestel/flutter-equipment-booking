@@ -1,3 +1,4 @@
+import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
@@ -36,14 +37,13 @@ class ProductsPage extends StatelessWidget {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: NavButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const LoginPage()),
           );
         },
-        child: const Icon(Icons.arrow_forward),
       ),
       bottomNavigationBar: const CustomBottomAppBar(),
     );

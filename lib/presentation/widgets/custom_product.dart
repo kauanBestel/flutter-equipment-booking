@@ -15,13 +15,13 @@ class CustomProduct extends StatefulWidget {
 }
 
 class _CustomProductState extends State<CustomProduct> {
-  bool isHovered = false;
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onHover: (value) {
+      onTap: () {
         setState(() {
-          isHovered = value;
+          isSelected = !isSelected;
         });
       },
       child: Container(
@@ -32,7 +32,7 @@ class _CustomProductState extends State<CustomProduct> {
             color: Colors.black,
             width: 1.5,
           ),
-          color: Colors.green,
+          color: isSelected ? Colors.green : Colors.grey,
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(50),
               bottomLeft: Radius.circular(50),
