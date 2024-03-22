@@ -29,53 +29,58 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    FormContainerWidget(
-                      controller: _emailController,
-                      hintText: 'E-mail',
-                      isPasswordField: false,
-                    ),
-                    const SizedBox(height: 20),
-                    FormContainerWidget(
-                      controller: _passwordController,
-                      hintText: 'Senha',
-                      isPasswordField: true,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterPage(),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        'Ainda não tem cadastro? Registre-se',
-                        style: TextStyle(
-                          color: Colors.blue,
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(200),
+                child: Image.asset(
+                  'assets/images/imagemRota2.png',
+                  height: 200,
+                ),
+              ),
+              Column(
+                children: [
+                  SizedBox(height: 20),
+                  FormContainerWidget(
+                    controller: _emailController,
+                    hintText: 'E-mail',
+                    isPasswordField: false,
+                  ),
+                  SizedBox(height: 20),
+                  FormContainerWidget(
+                    controller: _passwordController,
+                    hintText: 'Senha',
+                    isPasswordField: true,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterPage(),
                         ),
+                      );
+                    },
+                    child: const Text(
+                      'Ainda não tem cadastro? Registre-se',
+                      style: TextStyle(
+                        color: Colors.blue,
                       ),
                     ),
-                  ],
-                ),
-                CustomButton(
-                  label: 'Login',
-                  onPress: _signIn,
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              CustomButton(
+                label: 'Login',
+                onPress: _signIn,
+              ),
+            ],
           ),
         ),
       ),

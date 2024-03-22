@@ -1,35 +1,51 @@
+import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
+import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
-import 'package:equipment_boking/presentation/widgets/custom_product_selection.dart';
-import 'package:flutter/material.dart';
+import 'package:equipment_boking/presentation/widgets/custom_product.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: CustomProduct(
-              onPress: () {},
-              label: "OI",
-            ),
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const LoginPage()),
+    final List<String> products = [
+      'Produto 1',
+      'Produto 2',
+      'Produto 3',
+      'Produto 4',
+      'Produto 5',
+      'Produto 5',
+      'Produto 5',
+      'Produto 5',
+      'Produto 5',
+    ];
+
+    return Scaffold(
+      body: Container(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView.builder(
+          itemCount: products.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: CustomProduct(
+                onPress: () {},
+                label: 'produto X',
+              ),
             );
           },
-          child: const Icon(Icons.arrow_forward),
         ),
-        bottomNavigationBar: const CustomBottomAppBar(),
       ),
+      floatingActionButton: NavButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const LoginPage()),
+          );
+        },
+      ),
+      bottomNavigationBar: const CustomBottomAppBar(),
     );
   }
 }
