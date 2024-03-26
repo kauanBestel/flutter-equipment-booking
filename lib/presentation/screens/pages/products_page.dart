@@ -9,6 +9,7 @@ class ProductsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //[{nome: 'produto x'(String), id: 1(int), alugado: false(boolen), alugador: null}, {nome: 'produto y', id: 2, alugado: true, alugador: 'kauan'}]
     final List<String> products = [
       'Produto 1',
       'Produto 2',
@@ -31,7 +32,7 @@ class ProductsPage extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 20.0),
               child: CustomProduct(
                 onPress: () {},
-                label: 'produto X',
+                label: products[index],
               ),
             );
           },
