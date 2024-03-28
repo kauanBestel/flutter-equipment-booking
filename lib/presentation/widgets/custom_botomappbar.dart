@@ -1,11 +1,12 @@
+import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomAppBar extends StatefulWidget {
   const CustomBottomAppBar({
-    super.key,
+    Key? key,
     this.buttonColor = const Color(0xFF6DC0F7),
-  });
+  }) : super(key: key);
 
   final Color buttonColor;
 
@@ -13,11 +14,20 @@ class CustomBottomAppBar extends StatefulWidget {
   State<CustomBottomAppBar> createState() => _CustomBottomAppBarState();
 }
 
+class IconRoute {
+  final IconData icon;
+  final Widget route;
+
+  IconRoute({required this.icon, required this.route});
+}
+
 class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
   int i = 0;
-  List<IconData> iconList = [Icons.shopping_cart, Icons.calendar_month];
-  //substituir icone por um objeto {icon: Icons.X, route: XPage}
-
+  List<IconRoute> iconRoutes = [
+    IconRoute(icon: Icons.shopping_cart, route: const ProductsPage()),
+    IconRoute(icon: Icons.calendar_month, route: const CalendarPage()),
+    IconRoute(icon: Icons.check, route: const ProductsPage()),
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,19 +40,17 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          for (var i = 0; i < iconList.length; i++)
+          for (var iconRoute in iconRoutes)
             IconButton(
               icon: Icon(
-                iconList[i],
+                iconRoute.icon,
                 color: Colors.white,
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const ProductsPage(),
-                    //substituir por iconList.route
-                  ),
+                  MaterialPageRoute(builder: (context) => iconRoute.route),
+                  //substituir por iconList.route
                 );
               },
             ),
