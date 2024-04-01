@@ -27,7 +27,7 @@ class _CustomProductState extends State<CustomProduct> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         height: 90,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -37,7 +37,7 @@ class _CustomProductState extends State<CustomProduct> {
                   ? Colors.green.withOpacity(0.4)
                   : Colors.transparent,
               blurRadius: 2.0,
-              spreadRadius: 1.0,
+              spreadRadius: 2.0,
               offset: const Offset(0, 3),
             ),
           ],
@@ -60,7 +60,6 @@ class _CustomProductState extends State<CustomProduct> {
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(50),
               bottomLeft: Radius.circular(50),
-              
             ),
           ),
           height: 60,
