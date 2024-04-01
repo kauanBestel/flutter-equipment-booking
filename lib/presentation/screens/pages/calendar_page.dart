@@ -1,3 +1,5 @@
+import 'package:equipment_boking/presentation/screens/pages/admin_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:flutter/material.dart';
 import 'package:steps_indicator/steps_indicator.dart';
@@ -34,10 +36,10 @@ class _CalendarPageState extends State<CalendarPage> {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const StepsIndicator(
-                selectedStep: 1,
+                selectedStep: 2,
                 doneLineColor: Colors.black,
                 doneLineThickness: 2,
                 undoneLineThickness: 2,
@@ -70,11 +72,34 @@ class _CalendarPageState extends State<CalendarPage> {
                   });
                 },
               ),
+              const SizedBox(height: 60,)
             ],
           ),
         ),
       ),
-      bottomNavigationBar: const CustomBottomAppBar(),
-    );
+     bottomNavigationBar: CustomBottomAppBar(
+          iconRoutes: [
+            IconRoute(
+                icon: Icons.shopping_cart,
+                route: const ProductsPage1(),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProductsPage1()),
+                  );
+                }),
+            IconRoute(
+                icon: Icons.check,
+                route: const CalendarPage(),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AdminPage()),
+                  );
+                }),
+          ],
+        ));
   }
 }
