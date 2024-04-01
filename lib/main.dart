@@ -1,6 +1,6 @@
 import 'package:equipment_boking/presentation/firebaseAuth/firebase_options.dart';
 import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: RegisterPage(),
+      home: ProductsPage1(),
     );
   }
 }

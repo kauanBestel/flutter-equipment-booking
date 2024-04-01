@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomProduct extends StatefulWidget {
-  const CustomProduct(
+class CustomProduct2 extends StatefulWidget {
+  const CustomProduct2(
       {super.key,
       required this.onPress,
       required this.label,
@@ -12,10 +12,10 @@ class CustomProduct extends StatefulWidget {
   final Color bgcolor;
 
   @override
-  State<CustomProduct> createState() => _CustomProductState();
+  State<CustomProduct2> createState() => _CustomProductState();
 }
 
-class _CustomProductState extends State<CustomProduct> {
+class _CustomProductState extends State<CustomProduct2> {
   bool isSelected = false;
 
   @override
@@ -68,7 +68,7 @@ class _CustomProductState extends State<CustomProduct> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(200),
                 child: Image.asset(
-                  'assets/images/imagemRota2.png',
+                  'assets/images/mouse.jpeg',
                   height: 200,
                 ),
               ),

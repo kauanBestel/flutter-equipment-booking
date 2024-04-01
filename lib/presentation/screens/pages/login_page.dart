@@ -2,7 +2,7 @@ import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
 import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 
 import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 
@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.pushReplacement(
           // ignore: use_build_context_synchronously
           context,
-          MaterialPageRoute(builder: (context) => const ProductsPage()),
+          MaterialPageRoute(builder: (context) => const ProductsPage1()),
         );
       } else {
         showDialog(

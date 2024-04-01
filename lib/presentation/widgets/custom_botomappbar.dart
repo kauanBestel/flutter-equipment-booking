@@ -1,33 +1,23 @@
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
 import 'package:flutter/material.dart';
-
-class CustomBottomAppBar extends StatefulWidget {
-  const CustomBottomAppBar({
-    Key? key,
-    this.buttonColor = const Color(0xFF6DC0F7),
-  }) : super(key: key);
-
-  final Color buttonColor;
-
-  @override
-  State<CustomBottomAppBar> createState() => _CustomBottomAppBarState();
-}
 
 class IconRoute {
   final IconData icon;
   final Widget route;
+  final VoidCallback onPressed;
 
-  IconRoute({required this.icon, required this.route});
+  IconRoute({required this.icon, required this.route, required this.onPressed});
 }
 
-class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
-  int i = 0;
-  List<IconRoute> iconRoutes = [
-    IconRoute(icon: Icons.shopping_cart, route: const ProductsPage()),
-    IconRoute(icon: Icons.calendar_month, route: const CalendarPage()),
-    IconRoute(icon: Icons.check, route: const ProductsPage()),
-  ];
+class CustomBottomAppBar extends StatelessWidget {
+  final List<IconRoute> iconRoutes;
+  final Color buttonColor;
+
+  const CustomBottomAppBar({
+    super.key,
+    required this.iconRoutes,
+    this.buttonColor = const Color(0xFF6DC0F7),
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,7 +25,7 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
       margin: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
-        color: widget.buttonColor,
+        color: buttonColor,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -46,13 +36,7 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
                 iconRoute.icon,
                 color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => iconRoute.route),
-                  //substituir por iconList.route
-                );
-              },
+              onPressed: iconRoute.onPressed,
             ),
         ],
       ),

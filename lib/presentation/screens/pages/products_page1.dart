@@ -1,24 +1,21 @@
 import 'package:equipment_boking/presentation/screens/pages/admin_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
-import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
-import 'package:equipment_boking/presentation/widgets/custom_product2.dart';
-import 'package:flutter/material.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page2.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
+import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
+import 'package:flutter/material.dart';
+import 'package:equipment_boking/presentation/widgets/custom_product1.dart';
 import 'package:steps_indicator/steps_indicator.dart';
 
-class ProductsPage2 extends StatelessWidget {
-  const ProductsPage2({super.key});
+class ProductsPage1 extends StatelessWidget {
+  const ProductsPage1({super.key});
 
   @override
   Widget build(BuildContext context) {
-    //[{nome: 'produto x'(String), id: 1(int), alugado: false(boolen), alugador: null}, {nome: 'produto y', id: 2, alugado: true, alugador: 'kauan'}]
     final List<String> products = [
-      'Produto 1',
-      'Produto 2',
-      'Produto 3',
-      'Produto 4',
-      'Produto 5',
+      'Carro 1',
+      'Carro 2',
+      'Carro 3',
     ];
 
     return Scaffold(
@@ -27,7 +24,7 @@ class ProductsPage2 extends StatelessWidget {
         child: Column(
           children: [
             const StepsIndicator(
-              selectedStep: 1,
+              selectedStep: 0,
               doneLineColor: Colors.black,
               doneLineThickness: 2,
               undoneLineThickness: 2,
@@ -51,7 +48,7 @@ class ProductsPage2 extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 20.0),
-                    child: CustomProduct2(
+                    child: CustomProduct1(
                       onPress: () {},
                       label: products[index],
                     ),
@@ -66,7 +63,7 @@ class ProductsPage2 extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const CalendarPage()),
+            MaterialPageRoute(builder: (context) => const ProductsPage2()),
           );
         },
       ),

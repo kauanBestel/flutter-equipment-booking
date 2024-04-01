@@ -1,5 +1,7 @@
-import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
+import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
 import 'package:flutter/material.dart';
 
 class AdminPage extends StatelessWidget {
@@ -27,16 +29,38 @@ class AdminPage extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: NavButton(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const LoginPage()),
+            MaterialPageRoute(builder: (context) => const ProductsPage1()),
           );
         },
-        child: const Icon(Icons.arrow_forward),
+       
       ),
-      bottomNavigationBar: const CustomBottomAppBar(),
+     bottomNavigationBar: CustomBottomAppBar(
+        iconRoutes: [
+          IconRoute(
+              icon: Icons.shopping_cart,
+              route: const ProductsPage1(),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductsPage1 ()),
+                );
+              }),
+          IconRoute(
+            icon: Icons.calendar_month,
+            route: const CalendarPage(),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CalendarPage()),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }
