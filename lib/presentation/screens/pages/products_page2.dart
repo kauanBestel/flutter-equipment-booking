@@ -19,6 +19,7 @@ class ProductsPage2 extends StatelessWidget {
       'Produto 3',
       'Produto 4',
       'Produto 5',
+      'Produto 6',
     ];
 
     return Scaffold(
@@ -85,7 +86,7 @@ class ProductsPage2 extends StatelessWidget {
             icon: Icons.check,
             route: const CalendarPage(),
             onPressed: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const AdminPage()),
               );

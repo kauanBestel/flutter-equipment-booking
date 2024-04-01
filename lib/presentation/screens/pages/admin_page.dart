@@ -36,9 +36,8 @@ class AdminPage extends StatelessWidget {
             MaterialPageRoute(builder: (context) => const ProductsPage1()),
           );
         },
-       
       ),
-     bottomNavigationBar: CustomBottomAppBar(
+      bottomNavigationBar: CustomBottomAppBar(
         iconRoutes: [
           IconRoute(
               icon: Icons.shopping_cart,
@@ -46,7 +45,8 @@ class AdminPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ProductsPage1 ()),
+                  MaterialPageRoute(
+                      builder: (context) => const ProductsPage1()),
                 );
               }),
           IconRoute(

@@ -5,6 +5,8 @@ class IconRoute {
   final Widget route;
   final VoidCallback onPressed;
 
+//criar variaveis de caminho aqui mesmo. 
+
   IconRoute({required this.icon, required this.route, required this.onPressed});
 }
 

@@ -73,16 +73,16 @@ class ProductsPage1 extends StatelessWidget {
               icon: Icons.calendar_month,
               route: const ProductsPage1(),
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const CalendarPage ()),
+                  MaterialPageRoute(builder: (context) => const CalendarPage()),
                 );
               }),
           IconRoute(
             icon: Icons.check,
             route: const CalendarPage(),
             onPressed: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const AdminPage()),
               );

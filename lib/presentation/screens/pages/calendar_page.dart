@@ -36,7 +36,7 @@ class _CalendarPageState extends State<CalendarPage> {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const StepsIndicator(
                 selectedStep: 2,
@@ -72,6 +72,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   });
                 },
               ),
+              const SizedBox(height: 60,)
             ],
           ),
         ),
@@ -82,7 +83,7 @@ class _CalendarPageState extends State<CalendarPage> {
                 icon: Icons.shopping_cart,
                 route: const ProductsPage1(),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ProductsPage1()),
@@ -92,7 +93,7 @@ class _CalendarPageState extends State<CalendarPage> {
                 icon: Icons.check,
                 route: const CalendarPage(),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const AdminPage()),
