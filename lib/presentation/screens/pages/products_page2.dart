@@ -1,5 +1,6 @@
 import 'package:equipment_boking/presentation/screens/pages/admin_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
 import 'package:equipment_boking/presentation/widgets/custom_product2.dart';
@@ -74,12 +75,21 @@ class ProductsPage2 extends StatelessWidget {
       bottomNavigationBar: CustomBottomAppBar(
         iconRoutes: [
           IconRoute(
+              icon: Icons.home,
+              route: HomePage(),
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              }),
+          IconRoute(
               icon: Icons.calendar_month,
               route: const ProductsPage1(),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CalendarPage ()),
+                  MaterialPageRoute(builder: (context) => const CalendarPage()),
                 );
               }),
           IconRoute(
