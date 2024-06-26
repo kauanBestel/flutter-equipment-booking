@@ -1,7 +1,4 @@
-import 'package:equipment_boking/presentation/screens/pages/admin_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
-import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
+import 'package:equipment_boking/presentation/widgets/base_bottomappbar.dart';
 import 'package:flutter/material.dart';
 import 'package:steps_indicator/steps_indicator.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -80,37 +77,7 @@ class _CalendarPageState extends State<CalendarPage> {
             ),
           ),
         ),
-        bottomNavigationBar: CustomBottomAppBar(
-          iconRoutes: [
-            IconRoute(
-                icon: Icons.home,
-                route: HomePage(),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
-                }),
-            IconRoute(
-                icon: Icons.shopping_cart,
-                route: const ProductsPage1(),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ProductsPage1()),
-                  );
-                }),
-            IconRoute(
-                icon: Icons.check,
-                route: const CalendarPage(),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AdminPage()),
-                  );
-                }),
-          ],
-        ));
+        bottomNavigationBar: const BaseBottomAppBar()
+        );
   }
 }

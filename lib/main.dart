@@ -1,5 +1,6 @@
 import 'package:equipment_boking/presentation/firebaseAuth/firebase_options.dart';
-import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
+// import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -29,8 +30,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
+    return  const MaterialApp(
+      home: LoginPage(),
     );
   }
 }

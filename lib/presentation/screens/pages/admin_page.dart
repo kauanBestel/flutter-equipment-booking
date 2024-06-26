@@ -1,6 +1,5 @@
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
-import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
+import 'package:equipment_boking/presentation/widgets/base_bottomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
 import 'package:flutter/material.dart';
 
@@ -37,30 +36,7 @@ class AdminPage extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: CustomBottomAppBar(
-        iconRoutes: [
-          IconRoute(
-              icon: Icons.shopping_cart,
-              route: const ProductsPage1(),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ProductsPage1()),
-                );
-              }),
-          IconRoute(
-            icon: Icons.calendar_month,
-            route: const CalendarPage(),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CalendarPage()),
-              );
-            },
-          ),
-        ],
-      ),
+      bottomNavigationBar: const BaseBottomAppBar()
     );
   }
 }
