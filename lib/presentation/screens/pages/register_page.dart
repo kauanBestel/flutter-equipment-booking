@@ -98,6 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
     String username = _usernameController.text;
     String email = _emailController.text;
     String password = _passwordController.text;
+    int role = 0;
 
     try {
       await _auth.signUpWithEmailAndPassword(email, password);
@@ -105,11 +106,12 @@ class _RegisterPageState extends State<RegisterPage> {
       await _firestore.collection('users').doc(email).set({
         'username': username,
         'email': email,
+        'role': role,
       });
 
       // ignore: avoid_print
       print("Usuário criado com sucesso");
-      Navigator.push(
+      Navigator.pushReplacement(
         // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(builder: (context) => const LoginPage()),

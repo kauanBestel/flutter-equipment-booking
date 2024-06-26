@@ -1,8 +1,5 @@
-import 'package:equipment_boking/presentation/screens/pages/admin_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/products_page2.dart';
-import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
+import 'package:equipment_boking/presentation/widgets/base_bottomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/widgets/custom_product1.dart';
@@ -68,38 +65,7 @@ class ProductsPage1 extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: CustomBottomAppBar(
-        iconRoutes: [
-          IconRoute(
-              icon: Icons.home,
-              route: HomePage(),
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              }),
-          IconRoute(
-              icon: Icons.calendar_month,
-              route: const ProductsPage1(),
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const CalendarPage()),
-                );
-              }),
-          IconRoute(
-            icon: Icons.check,
-            route: const CalendarPage(),
-            onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const AdminPage()),
-              );
-            },
-          ),
-        ],
-      ),
+      bottomNavigationBar: const BaseBottomAppBar()
     );
   }
 }
