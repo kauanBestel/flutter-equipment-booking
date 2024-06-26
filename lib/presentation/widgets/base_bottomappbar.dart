@@ -1,7 +1,6 @@
 import 'package:equipment_boking/presentation/screens/pages/admin_page.dart';
 import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
-// import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 import 'package:equipment_boking/presentation/widgets/custom_botomappbar.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +12,14 @@ class BaseBottomAppBar extends StatelessWidget {
     return CustomBottomAppBar(
         iconRoutes: [
           IconRoute(
-              icon: Icons.home,
-              route: const HomePage(),
+              icon: Icons.shopping_cart,
+              route: const ProductsPage1(),
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   PageRouteBuilder(
                   transitionDuration: Duration.zero, // No animation duration
-                  pageBuilder: (_, __, ___) =>  const HomePage()
+                  pageBuilder: (_, __, ___) =>  const ProductsPage1()
                 ),
               );
             }
