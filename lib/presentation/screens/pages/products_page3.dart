@@ -1,16 +1,17 @@
 import 'package:equipment_boking/presentation/widgets/base_bottomappbar.dart';
 import 'package:flutter/material.dart';
+import 'package:steps_indicator/steps_indicator.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class CalendarPage extends StatefulWidget {
-  const CalendarPage({super.key});
+class ProductsPage3 extends StatefulWidget {
+  const ProductsPage3({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _CalendarPageState createState() => _CalendarPageState();
+  _ProductsPage3State createState() => _ProductsPage3State();
 }
 
-class _CalendarPageState extends State<CalendarPage> {
+class _ProductsPage3State extends State<ProductsPage3> {
   late DateTime _selectedDay;
   late DateTime _focusedDay;
 
@@ -35,6 +36,24 @@ class _CalendarPageState extends State<CalendarPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                const StepsIndicator(
+                  selectedStep: 2,
+                  doneLineColor: Colors.black,
+                  doneLineThickness: 2,
+                  undoneLineThickness: 2,
+                  unselectedStepBorderSize: 2,
+                  selectedStepBorderSize: 2,
+                  undoneLineColor: Colors.black,
+                  unselectedStepColorIn: Colors.white,
+                  selectedStepColorIn: Colors.blue,
+                  selectedStepColorOut: Colors.black,
+                  unselectedStepColorOut: Colors.black,
+                  nbSteps: 3,
+                  lineLength: 100,
+                  doneStepSize: 20,
+                  unselectedStepSize: 40,
+                  selectedStepSize: 40,
+                ),
                 const SizedBox(height: 20),
                 TableCalendar(
                   firstDay: DateTime.utc(2010, 10, 16),
