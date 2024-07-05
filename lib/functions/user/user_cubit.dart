@@ -1,8 +1,12 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 
 part 'user_state.dart';
 
 class UserCubit extends Cubit<UserState> {
-  UserCubit() : super(UserInitial());
+  UserCubit() : super(UserState.initial());
+
+  Future<void> setLoading(bool isLoading) async {
+    var newState = state.copyWith(isLoading: isLoading);
+    emit(newState);
+  }
 }

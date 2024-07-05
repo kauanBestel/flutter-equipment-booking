@@ -1,8 +1,12 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 
 part 'product_state.dart';
 
 class ProductCubit extends Cubit<ProductState> {
-  ProductCubit() : super(ProductInitial());
+  ProductCubit() : super(ProductState.initial());
+
+  Future<void> setLoading(bool isLoading) async {
+    var newState = state.copyWith(isLoading: isLoading);
+    emit(newState);
+  }
 }
