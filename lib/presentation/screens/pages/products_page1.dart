@@ -61,7 +61,9 @@ class ProductsPage1 extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const ProductsPage2()),
+                PageRouteBuilder(
+                transitionDuration: Duration.zero, // No animation duration
+                pageBuilder: (_, __, ___) => const ProductsPage2()),
           );
         },
       ),

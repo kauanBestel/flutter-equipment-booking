@@ -1,4 +1,4 @@
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page3.dart';
 import 'package:equipment_boking/presentation/widgets/base_bottomappbar.dart';
 import 'package:equipment_boking/presentation/widgets/custom_navigation_button.dart';
 import 'package:equipment_boking/presentation/widgets/custom_product2.dart';
@@ -65,7 +65,9 @@ class ProductsPage2 extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const CalendarPage()),
+                PageRouteBuilder(
+                transitionDuration: Duration.zero, // No animation duration
+                pageBuilder: (_, __, ___) => const ProductsPage3()),
           );
         },
       ),
