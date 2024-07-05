@@ -12,7 +12,7 @@ class FormContainerWidget extends StatefulWidget {
   final ValueChanged<String>? onFieldSubmitted;
   final TextInputType? inputType;
 
-  const  FormContainerWidget({
+  const FormContainerWidget({
     this.controller,
     this.isPasswordField,
     this.fieldKey,
@@ -49,7 +49,7 @@ class _FormContainerWidgetState extends State<FormContainerWidget> {
         validator: widget.validator,
         onFieldSubmitted: widget.onFieldSubmitted,
         decoration: InputDecoration(
-          fillColor: Color.fromARGB(0, 255, 255, 255),
+          fillColor: const Color.fromARGB(0, 255, 255, 255),
           filled: true,
           hintText: widget.hintText,
           hintStyle: const TextStyle(color: Color.fromARGB(131, 0, 0, 0)),
@@ -67,7 +67,7 @@ class _FormContainerWidgetState extends State<FormContainerWidget> {
                 : const Text(""),
           ),
           border: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.black),
+            borderSide: const BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(10.0),
           ),
         ),

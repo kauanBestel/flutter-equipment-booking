@@ -1,8 +1,8 @@
 import 'package:equipment_boking/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:equipment_boking/presentation/firebaseAuth/firebaseAuthServices.dart';
-import 'package:equipment_boking/presentation/screens/pages/register_page.dart'; 
-import 'package:equipment_boking/presentation/screens/pages/products_page.dart'; 
+import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/products_page1.dart';
 
 import 'package:equipment_boking/presentation/widgets/form_container_widget.dart';
 
@@ -29,53 +29,58 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Column(
-                  children: [
-                    SizedBox(height: 20),
-                    FormContainerWidget(
-                      controller: _emailController,
-                      hintText: 'E-mail',
-                      isPasswordField: false,
-                    ),
-                    SizedBox(height: 20),
-                    FormContainerWidget(
-                      controller: _passwordController,
-                      hintText: 'Senha',
-                      isPasswordField: true,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterPage(),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        'Ainda não tem cadastro? Registre-se',
-                        style: TextStyle(
-                          color: Colors.blue,
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(200),
+                child: Image.asset(
+                  'assets/images/imagemRota2.png',
+                  height: 200,
+                ),
+              ),
+              Column(
+                children: [
+                  const SizedBox(height: 20),
+                  FormContainerWidget(
+                    controller: _emailController,
+                    hintText: 'E-mail',
+                    isPasswordField: false,
+                  ),
+                  const SizedBox(height: 20),
+                  FormContainerWidget(
+                    controller: _passwordController,
+                    hintText: 'Senha',
+                    isPasswordField: true,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterPage(),
                         ),
+                      );
+                    },
+                    child: const Text(
+                      'Ainda não tem cadastro? Registre-se',
+                      style: TextStyle(
+                        color: Colors.blue,
                       ),
                     ),
-                  ],
-                ),
-                CustomButton(
-                  label: 'Login',
-                  onPress: _signIn,
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              CustomButton(
+                label: 'Login',
+                onPress: _signIn,
+              ),
+            ],
           ),
         ),
       ),
@@ -87,6 +92,7 @@ class _LoginPageState extends State<LoginPage> {
     String password = _passwordController.text;
 
     if (email.isEmpty || password.isEmpty) {
+      // ignore: avoid_print
       print("Por favor, preencha todos os campos.");
       return;
     }
@@ -96,29 +102,33 @@ class _LoginPageState extends State<LoginPage> {
 
       if (user != null) {
         Navigator.pushReplacement(
+          // ignore: use_build_context_synchronously
           context,
-          MaterialPageRoute(builder: (context) => const ProductsPage()),
+          MaterialPageRoute(builder: (context) => const ProductsPage1()),
         );
-      } else
+      } else {
         showDialog(
+          // ignore: use_build_context_synchronously
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text("Erro de Login"),
-              content: Text(
+              title: const Text("Erro de Login"),
+              content: const Text(
                   "Email ou senha incorretos. Por favor, tente novamente."),
               actions: [
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text("OK"),
+                  child: const Text("OK"),
                 ),
               ],
             );
           },
         );
+      }
     } catch (e) {
+      // ignore: avoid_print
       print("Erro durante o login: $e");
     }
   }

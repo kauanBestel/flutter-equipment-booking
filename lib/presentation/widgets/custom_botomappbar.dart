@@ -1,52 +1,46 @@
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/products_page.dart';
-import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
 import 'package:flutter/material.dart';
 
+class IconRoute {
+  final IconData icon;
+  final Widget route;
+  final VoidCallback onPressed;
+
+//criar variaveis de caminho aqui mesmo. 
+
+  IconRoute({required this.icon, required this.route, required this.onPressed});
+}
+
 class CustomBottomAppBar extends StatelessWidget {
+  final List<IconRoute> iconRoutes;
+  final Color buttonColor;
+
   const CustomBottomAppBar({
     super.key,
-    this.buttonColor = const Color(0xFF075187),
+    required this.iconRoutes,
+    this.buttonColor = const Color(0xFF6DC0F7),
   });
-
-  final Color buttonColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       margin: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.0),
         color: buttonColor,
       ),
-      child: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          for (var iconRoute in iconRoutes)
             IconButton(
-              icon: const Icon(Icons.shopping_cart),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ProductsPage(),
-                  ),
-                );
-              },
+              icon: Icon(
+                iconRoute.icon,
+                color: Colors.white,
+              ),
+              onPressed: iconRoute.onPressed,
             ),
-            IconButton(
-              icon: const Icon(Icons.calendar_month),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const RegisterPage(),
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
+        ],
       ),
     );
   }

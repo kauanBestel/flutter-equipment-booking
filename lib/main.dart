@@ -1,8 +1,8 @@
 import 'package:equipment_boking/presentation/firebaseAuth/firebase_options.dart';
-import 'package:equipment_boking/presentation/screens/pages/calendar_page.dart';
+import 'package:equipment_boking/presentation/screens/pages/login_page.dart';
+// import 'package:equipment_boking/presentation/screens/pages/home_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:equipment_boking/presentation/screens/pages/register_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -30,13 +30,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter main',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const CalendarPage(),
+    return  const MaterialApp(
+      home: LoginPage(),
     );
   }
 }
